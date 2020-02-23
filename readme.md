@@ -1,6 +1,6 @@
 # Mosquito JS
 
-A JavaScript Mosquito. This proved too painful to continue and quickly eroded my sanity levels. Wrapped it up as fast as possible. You an [see it here](http://tholman.com/mosquito-js). I shall not return to it. My descent into madness is logged below.
+A JavaScript Mosquito. This proved too painful to continue and quickly eroded my sanity levels. Wrapped it up as fast as possible. You an [see it here](http://tholman.com/mosquito-js). I shall not return to it. My descent into madness is logged below, as well as in the [code comments](https://github.com/tholman/mosquito-js/blob/master/mosquito/mosquito.js).
 
 ## How it went down
 
@@ -29,7 +29,7 @@ I've added another variable to randomly modulate and detune the volume and frequ
 As I start to extract the mosquito code into a function, so I can create multiple of them, I decide I've had enough and shouldn't do this anymore. It's completely pointless. I keep blocking my ears to see if the noise is inside my head or not. [I cross out](https://github.com/tholman/mosquito-js/commit/a36de0b35812a9358d4e503decb0536755259ffc) any other plans. And will end this project in the morning.
 
 **The morning after:**  
-I dreamed of mosquitos. I can't bear to run the mosquito for more than 1 second intervals, just to ensure that it's running. I've built a quick and [simple page for it](http://tholman.com/mosquito-js) and have called it quits.
+I dreamed of mosquitos. I can't bear to run the mosquito for more than 1 second intervals, just to ensure that it's running. I've built a quick and [simple page for it](http://tholman.com/mosquito-js) and have [annotated the javascript](https://github.com/tholman/mosquito-js/blob/master/mosquito/mosquito.js) lest some braver soul wishes to pick up this burden. I have called it quits.
 
 When times are bad, I can look at this graph and at least know that we have come a long way since the 1900's.
 
