@@ -9,3 +9,8 @@ Some cool ideas:
 - Amount of mosquitos based on scroll, multiplying the noise
 - Breeds?
 - That annoying noise they make when they stop?
+
+
+### Attributions
+
+Clap audio via https://www.freesoundslibrary.com/ - Attribution 4.0 International (CC BY 4.0)
