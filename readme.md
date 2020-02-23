@@ -1,6 +1,6 @@
 # Mosquito JS
 
-A JavaScript Mosquito. This proved too painful to continue and quickly eroded my sanity levels. Wrapped it up as fast as possible. You an [see it here](http://tholman.com/mosquito-js). I shall not return to it.
+A JavaScript Mosquito. This proved too painful to continue and quickly eroded my sanity levels. Wrapped it up as fast as possible. You an [see it here](http://tholman.com/mosquito-js). I shall not return to it. My descent into madness is logged below.
 
 ## How it went down
 
@@ -31,5 +31,10 @@ As I start to extract the mosquito code into a function, so I can create multipl
 **The morning after:**  
 I dreamed of mosquitos. I can't bear to run the mosquito for more than 1 second intervals, just to ensure that it's running. I've built a quick and [simple page for it](http://tholman.com/mosquito-js) and have called it quits.
 
-## Attributions
-Clap MP3 - Licenced /w (CC BY 4.0) (via https://www.freesoundslibrary.com/)
+When times are bad, I can look at this graph and at least know that we have come a long way since the 1900's.
+
+![graph of mosquito word usage over time](http://tholman.com/mosquito-js/mosquito-use-over-time.png)
+
+## Licenses
+Clap MP3 - Licenced /w (CC BY 4.0) (via https://www.freesoundslibrary.com/)  
+Code - Licensed /w (MIT)
