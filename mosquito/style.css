@@ -4,6 +4,7 @@
 
 html,
 body {
+  font-family: helvetica;
   margin: 0;
 }
 
@@ -19,4 +20,55 @@ header {
   background: #fff;
   flex-direction: column;
   border: 20px solid #eee;
+}
+
+h1 {
+  margin: 0px auto 25px;
+  font-size: 65px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+}
+
+h2 {
+  max-width: 450px;
+  font-size: 15px;
+  font-weight: normal;
+  text-align: center;
+  margin: 0 10px 20px;
+  line-height: 22px;
+}
+
+button {
+  padding: 10px 15px;
+  border: 2px solid;
+  border-radius: 3px;
+  background: #fefefe;
+  cursor: pointer;
+  transition: background-color 200ms;
+}
+
+button:hover {
+  background: #eee;
+}
+
+button span {
+  font-size: 24px;
+  display: inline-block;
+}
+
+.flip {
+  transform: scale(-1, 1);
+}
+
+.buttonText {
+  font-size: 14px;
+  letter-spacing: 0.6px;
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+.about {
+  padding-top: 20px;
+  font-size: 14px;
 }
