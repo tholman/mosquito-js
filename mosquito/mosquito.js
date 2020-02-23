@@ -111,15 +111,16 @@ let animationFrame
 let hasBeenStarted = false
 let clapAudio
 
-// Start the mosquito on click.
+// Start the mosquito on click/tap
 // Its annoying how much logic is in here.
+let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 const buttonTextNode = document.querySelector(".buttonText")
-document.querySelector("button").onclick = () => {
+document.querySelector("button").addEventListener(touchEvent, () => {
   if( isStopped ) {
     if( !hasBeenStarted ) {
       clapAudio = new Audio('./assets/clap.mp3');
       clapAudio.volume = 0.07 // WHY 0.07!? Because I can't tell if the mosquito noise is soft or the clap is loud
-      oscillator.start();
+      oscillator.start();  
       hasBeenStarted = true
     } else {
       oscillator.connect(lowVolumeFixedGain);
@@ -130,7 +131,7 @@ document.querySelector("button").onclick = () => {
     clapAudio.play()
     oscillator.disconnect(lowVolumeFixedGain);
     cancelAnimationFrame(animationFrame);
-    buttonTextNode.innerText = "Activate the mosquito again"
+    buttonTextNode.innerText = "Activate the mosquito"
   }
   isStopped = !isStopped
-};
+})
