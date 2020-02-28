@@ -20,7 +20,7 @@ I've [added a clap noise](https://github.com/tholman/mosquito-js/commit/db457848
 *The mosquito is becoming real.* I've created a function that detunes the frequency slightly at 60 times a second in a smooth sine wave. Now it buzzes closer and further away from my ears. I have twice closed all my tabs to make sure I've stopped the noise. I'm now acutely aware of every fan in the house.
 
 **The 55th minute:**  
-Is it possible to awaken a sleeping case of tinnitus? I think I have.
+Is it possible to awaken a sleeping case of tinnitus?
 
 **The 60th minute:**  
 I've added another variable to randomly modulate and detune the volume and frequencies along with the sine wave. I don't think there are any rhyme and reason to this devilish sound. Every now and when I stop it, I fear that something has landed on me, and check my exposed legs.
