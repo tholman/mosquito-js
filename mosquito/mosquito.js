@@ -13,7 +13,8 @@ gainNode.connect(context.destination);
 // I put another gain node to reduce the noise a ton because its insanely annoying
 // This can probably be merged into the previous one, but reads easier here to me.
 const lowVolumeFixedGain = context.createGain();
-lowVolumeFixedGain.gain.value = 0.003;
+const lowVolumeFixedGainValue = 0.003;
+lowVolumeFixedGain.gain.value = lowVolumeFixedGainValue;
 lowVolumeFixedGain.connect(gainNode);
 
 // Connect them all together.
@@ -101,7 +102,7 @@ function mosquite() {
 let isStopped = true
 let animationFrame
 
-// For some reason, you cannot call start/stop multiple times on an osccilator.
+// For some reason, you cannot call start/stop multiple times on an oscilator.
 // Quick searches reveal very little. Something real-world mechanical I'm assuming. (trade secret?)
 // 
 // I'm going to use this variable here to disconnect and reconnect the oscillator instead. Giving me that strange feeling;
@@ -114,7 +115,8 @@ let clapAudio
 // Start the mosquito on click/tap
 // Its annoying how much logic is in here.
 let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
-const buttonTextNode = document.querySelector(".buttonText")
+const buttonTextNode = document.querySelector(".buttonText");
+const missButton = document.getElementById('miss');
 document.querySelector("button").addEventListener(touchEvent, () => {
   if( isStopped ) {
     if( !hasBeenStarted ) {
@@ -126,12 +128,27 @@ document.querySelector("button").addEventListener(touchEvent, () => {
       oscillator.connect(lowVolumeFixedGain);
     }
     animationFrame = requestAnimationFrame(mosquite);
-    buttonTextNode.innerText = "Clap the mosquito out of existence"
+    buttonTextNode.innerText = "Clap the mosquito out of existence";
+    missButton.style.display = 'inline';
   } else {
     clapAudio.play()
     oscillator.disconnect(lowVolumeFixedGain);
     cancelAnimationFrame(animationFrame);
-    buttonTextNode.innerText = "Activate the mosquito"
+    buttonTextNode.innerText = "Activate the mosquito";
+    missButton.style.display = 'none';
   }
   isStopped = !isStopped
-})
+});
+
+missButton.addEventListener(touchEvent, () => {
+  clapAudio.play();
+  lowVolumeFixedGain.gain.cancelScheduledValues(context.currentTime);
+   // it's scared and runs aways
+  lowVolumeFixedGain.gain.setTargetAtTime(0.000001, context.currentTime, 0);
+  // aaaand it's back after 1 to 5 seconds
+  lowVolumeFixedGain.gain.setTargetAtTime(
+    lowVolumeFixedGainValue, 
+    context.currentTime + (Math.random() * 4 + 1),
+    10
+  );
+});
