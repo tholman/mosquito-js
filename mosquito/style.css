@@ -48,6 +48,7 @@ button {
   cursor: pointer;
   transition: background-color 200ms;
   max-width: 80vw;
+  margin: 10px;
 }
 
 button:hover {
@@ -80,6 +81,10 @@ i {
   text-align: center;
   padding-left: 30px;
   padding-right: 30px;
+}
+
+#miss {
+  display: none;
 }
 
 @media only screen and (max-width: 600px) {
